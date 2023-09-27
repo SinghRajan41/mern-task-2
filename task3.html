@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            border-style : solid;
+            border-width : 1px;
+            padding:10px;
+            width:50%;
+        }
+    </style>
+    <script>
+        function divide()
+        {
+            let a = Number.parseFloat(document.getElementById("i1").value);
+            let b = Number.parseFloat(document.getElementById("i2").value);
+            document.getElementById("outputBox").innerHTML = "The result is " + (a / b);
+        }
+        function multiply()
+        {
+            let a = Number.parseFloat(document.getElementById("i1").value);
+            let b = Number.parseFloat(document.getElementById("i2").value);
+            document.getElementById("outputBox").innerHTML = "The result is " +(a * b);
+        }
+    </script>
+</head>
+<body>
+    <div id = "container">
+        <span>Enter first Number &nbsp;&nbsp;&nbsp;</span><input type = "text" value = "" id = "i1">
+        <br><br>
+        <span>Enter second Number</span><input type = "text" value = "" id = "i2">
+        <br><br>
+        <button onclick = "divide()">Click to Divide</button>
+        <button onclick = "multiply()">Click to Multiply</button>
+        <p id = "outputBox"></p>
+    </div>
+</body>
+</html>

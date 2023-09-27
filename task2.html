@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sortString() {
+            let s = document.getElementById("inputBox").value;
+            let arr = [];
+            for(let i=0;i<s.length;i++) arr.push(s[i]);
+            arr.sort();
+            let res = "";
+            for(let i=0;i<arr.length;i++)   res += arr[i];
+            document.getElementById("output").innerHTML = res;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="" id="inputBox">
+    <br><br>
+    <button onclick="sortString()">Click to Sort</button>
+    <br>
+    <p id="output"></p>
+</body>
+</html>

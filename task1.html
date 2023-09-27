@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reverse() {
+            let num = document.getElementById("inputBox").value;
+            if (num.length == 0) {
+                document.getElementById("output").innerHTML = "Invalid Input";
+                return;
+            }
+            for(let i=0;i<num.length;i++)
+            {
+                let x = num.charCodeAt(i);
+                if(x < 48 || x>57)
+                {
+                    document.getElementById("output").innerHTML = "Invalid Input";
+                    return;
+                }
+            }
+            num = Number.parseInt(num);
+            let rev = 0;
+            while (num > 0) {   
+                rev = rev * 10 + num % 10;
+                num = Math.floor(num / 10); // Use Math.floor to get the integer part
+            }
+            document.getElementById("output").innerHTML = rev;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="" id="inputBox">
+    <br><br>
+    <button onclick="reverse()">Click to Reverse</button>
+    <br>
+    <p id="output"></p>
+</body>
+</html>
